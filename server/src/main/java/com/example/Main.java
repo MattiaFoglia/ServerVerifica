@@ -13,7 +13,6 @@ public class Main {
         ServerSocket ss = new ServerSocket(3000);
         do{
             Socket s = ss.accept();
-            System.out.println("un client si è collegato");
             MioThread t = new MioThread(s,numero);
             t.start();
         }while(true);
